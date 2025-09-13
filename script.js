@@ -47,21 +47,8 @@ class QuizApp {
         });
     }
 
-    async loadQuestions() {
-        try {
-            const response = await fetch('Questions.json');
-            if (!response.ok) throw new Error('Failed to load questions');
-            
-            this.questions = await response.json();
-            this.hideLoading();
-            this.startQuiz();
-        } catch (error) {
-            console.error('Error loading questions:', error);
-            this.loadFallbackQuestions();
-        }
-    }
-
-    loadFallbackQuestions() {
+    loadQuestions() {
+        // Use embedded questions to avoid network requests
         this.questions = [
             {
                 "question": "In JavaScript, what is the output of typeof null?",
@@ -293,6 +280,34 @@ class QuizApp {
         
         const button = alertContent.querySelector('button');
         button.style.cssText = `
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        `;
+        
+        document.body.appendChild(alertDiv);
+    }
+
+    showError(message) {
+        this.hideLoading();
+        this.elements.questionText.textContent = message;
+        this.elements.questionText.style.color = '#dc3545';
+    }
+
+    hideLoading() {
+        this.elements.loading.classList.add('hidden');
+    }
+}
+
+// Initialize the quiz when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new QuizApp();
+});cssText = `
             margin-top: 20px;
             padding: 10px 20px;
             background: #667eea;
