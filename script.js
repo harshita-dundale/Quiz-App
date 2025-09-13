@@ -307,32 +307,4 @@ class QuizApp {
 // Initialize the quiz when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new QuizApp();
-});cssText = `
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #667eea;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        `;
-        
-        document.body.appendChild(alertDiv);
-    }
-
-    showError(message) {
-        this.hideLoading();
-        this.elements.questionText.textContent = message;
-        this.elements.questionText.style.color = '#dc3545';
-    }
-
-    hideLoading() {
-        this.elements.loading.classList.add('hidden');
-    }
-}
-
-// Initialize the quiz when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new QuizApp();
 });
