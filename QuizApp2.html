@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result </title>
+    <link rel="stylesheet" href="QuizApp.css">
+</head>
+
+<body>
+    <div class="container2">
+        <p><b>Your Score</b> </p>
+        <h1 id="score"></h1>
+    </div>
+    <script>
+        let score = localStorage.getItem("Score");
+        console.log(score);
+        document.getElementById("score").innerHTML = score !== null ? score : 0;
+    </script>
+</body>
+</html

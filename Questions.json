@@ -1,0 +1,50 @@
+[
+    {
+        "question" : "In JavaScript, what is the output of typeof null?",
+         "op1" : "undefined",
+         "op2" : "object",
+         "op3" : "null",
+         "op4" : "string",
+         "Correct" : "opt2"
+    },
+    {
+        "question" : "Which of the following is a JavaScript framework?",
+         "op1" : "Django",
+         "op2" : "Flask",
+         "op3" : "React",
+         "op4" : "Laravel",
+         "Correct" : "opt3"
+    },
+    {
+        "question" : "Which planet is known as the Red Planet?",
+         "op1" : "Venus",
+         "op2" : "Mars",
+         "op3" : "Jupiter",
+         "op4" : "Saturn",
+         "Correct" : "opt2"
+    },
+    {
+        "question" : "Who wrote the play Romeo and Juliet?",
+         "op1" : "William Shakespeare",
+         "op2" : "Charles Dickens",
+         "op3" : "George Orwell",
+         "op4" : "Mark Twain",
+         "Correct" : "opt1"
+    },
+    {
+        "question" : "What is the largest ocean on Earth?",
+         "op1" : "Atlantic Ocean",
+         "op2" : "Indian Ocean",
+         "op3" : "Arctic Ocean",
+         "op4" : "Pacific Ocean",
+         "Correct" : "opt4"
+    },
+    {
+        "question" : "Which programming language is known as the 'language of the web'?",
+         "op1" : "Python",
+         "op2" : "JavaScript",
+         "op3" : "Java",
+         "op4" : "C++",
+         "Correct" : "opt2"
+    }
+]

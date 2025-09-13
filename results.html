@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results - Enhanced Quiz App</title>
+    <link rel="stylesheet" href="results.css">
+</head>
+<body>
+    <div class="results-container">
+        <div class="results-header">
+            <h1>🎉 Quiz Complete!</h1>
+            <div class="score-circle">
+                <div class="score-text">
+                    <span id="score-percentage">0</span>%
+                </div>
+            </div>
+        </div>
+
+        <div class="results-content">
+            <div class="score-details">
+                <div class="score-item">
+                    <span class="label">Correct Answers:</span>
+                    <span id="correct-answers" class="value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Total Questions:</span>
+                    <span id="total-questions" class="value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Accuracy:</span>
+                    <span id="accuracy" class="value">0%</span>
+                </div>
+            </div>
+
+            <div class="performance-message">
+                <h3 id="performance-title">Great Job!</h3>
+                <p id="performance-text">You've completed the quiz successfully.</p>
+            </div>
+
+            <div class="review-section">
+                <h3>Review Your Answers</h3>
+                <div id="answers-review" class="answers-container">
+                    <!-- Answers will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="results-footer">
+            <button id="restart-btn" class="btn btn-primary">Take Quiz Again</button>
+            <button id="home-btn" class="btn btn-secondary">Back to Home</button>
+        </div>
+    </div>
+
+    <script src="results.js"></script>
+</body>
+</html>
