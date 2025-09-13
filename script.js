@@ -4,7 +4,7 @@ class QuizApp {
         this.currentQuestion = 0;
         this.score = 0;
         this.questions = [];
-        this.timeLeft = 15;
+        this.timeLeft = 30;
         this.timer = null;
         this.userAnswers = [];
         
@@ -26,7 +26,6 @@ class QuizApp {
             progress: document.getElementById('progress'),
             currentScore: document.getElementById('current-score'),
             nextBtn: document.getElementById('next-btn'),
-            prevBtn: document.getElementById('prev-btn'),
             loading: document.getElementById('loading')
         };
 
@@ -35,7 +34,6 @@ class QuizApp {
 
     bindEvents() {
         this.elements.nextBtn.addEventListener('click', () => this.handleNext());
-        this.elements.prevBtn.addEventListener('click', () => this.handlePrevious());
         
         // Add click handlers for option containers
         document.querySelectorAll('.option').forEach(option => {
@@ -146,21 +144,15 @@ class QuizApp {
         }
     }
 
-    handlePrevious() {
-        if (this.currentQuestion > 0) {
-            this.currentQuestion--;
-            this.updateDisplay();
-        }
-    }
+
 
     updateButtonStates() {
-        this.elements.prevBtn.disabled = this.currentQuestion === 0;
         this.elements.nextBtn.textContent = 
             this.currentQuestion === this.questions.length - 1 ? 'Finish' : 'Next';
     }
 
     startTimer() {
-        this.timeLeft = 15;
+        this.timeLeft = 30;
         this.updateTimerDisplay();
         
         this.timer = setInterval(() => {
